@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Block
+  - Tree
   layers:
   - Default
   - TransparentFX
