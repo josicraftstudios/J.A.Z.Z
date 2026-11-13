@@ -8,14 +8,17 @@ public class PlayerMovment : MonoBehaviour
     public int Jump;
     private Rigidbody2D body;
     public Transform GroundedRay;
+ 
 
     //Player stuff
     private PlayerState state = PlayerState.Norm;
+    public GameObject Gun;
 
     // Zipline stuff
     private int ZipDir = 1;
     private int ZipSpeed = 3;
-    public float LookForZip = 0;
+    private float LookForZip = 0;
+    private bool SpaceBarPrees = false;
     private Transform currentZipline;
 
     private void Awake()
@@ -36,7 +39,7 @@ public class PlayerMovment : MonoBehaviour
                 transform.rotation = currentZipline.rotation;
                 body.linearVelocity = currentZipline.right * ZipSpeed * ZipDir;
 
-                if (Input.GetKey(KeyCode.Space))
+                if (SpaceBarPrees)
                 {
                     LeavZip();
                     Jumpping();
@@ -53,6 +56,12 @@ public class PlayerMovment : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E)) { LookForZip = .4f; }
         LookForZip= Mathf.Max(0f,LookForZip-Time.deltaTime);
+        //zipline spacebar
+        SpaceBarPrees = false;
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SpaceBarPrees = true;
+        }
     }
 
 
@@ -88,6 +97,15 @@ public class PlayerMovment : MonoBehaviour
 
                 }
                 break;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("NewNet"))
+        {
+            Destroy(collision.gameObject);
+            Gun.GetComponent<GunScript>().Loaded = true;
         }
     }
 
