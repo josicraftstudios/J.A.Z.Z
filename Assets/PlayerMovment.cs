@@ -8,6 +8,7 @@ public class PlayerMovment : MonoBehaviour
 
     public Transform GroundedRay;
 
+    private PlayerState state;
 
     private void Awake()
     {
@@ -16,15 +17,39 @@ public class PlayerMovment : MonoBehaviour
 
     private void Update()
     {
-        body.linearVelocity = new Vector2(Input.GetAxis("Horizontal") * Speed, body.linearVelocityY);
+        switch (state)
+        {
+            case PlayerState.Norm:
+                body.linearVelocity = new Vector2(Input.GetAxis("Horizontal") * Speed, body.linearVelocityY);
+                break;
+        }
 
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        switch (state)
+        {
+            case PlayerState.Norm:
+                if (collision.gameObject.tag == "Zipline")
+                {
+                    Jumpping();
+                }
+                break;
+        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Block")
+        switch (state)
         {
-            Jumpping();
+            case PlayerState.Norm:
+                if (collision.gameObject.tag == "Block")
+                {
+                    Jumpping();
+                }
+                break;
         }
     }
 
@@ -36,5 +61,6 @@ public class PlayerMovment : MonoBehaviour
         }
     }
 
+    enum PlayerState { Norm, Zipline };
 
 }
