@@ -18,13 +18,22 @@ public class PlayerMovment : MonoBehaviour
     {
         body.linearVelocity = new Vector2(Input.GetAxis("Horizontal") * Speed, body.linearVelocityY);
 
-        RaycastHit2D hit = Physics2D.Raycast(GroundedRay.position, Vector2.down, 1.2f);
-        bool isGrounded = hit.collider != null && hit.collider.CompareTag("Block");
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            body.linearVelocity = new Vector2(body.linearVelocity.x, Jump);
-        }
+    }
 
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Block")
+        {
+            Jumpping();
+        }
+    }
+
+    private void Jumpping()
+    {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            body.linearVelocity = new Vector2(body.linearVelocityX, Jump);
+        }
     }
 
 
