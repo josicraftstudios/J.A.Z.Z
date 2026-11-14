@@ -4,7 +4,8 @@ public class PlayerMovment : MonoBehaviour
 {
 
     //move stuff
-    public int Speed;
+    public float Speed;
+    float Speed_change = 2;
     public int Jump;
     private Rigidbody2D body;
     public Transform GroundedRay;
@@ -108,7 +109,18 @@ public class PlayerMovment : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Gun.GetComponent<GunScript>().Loaded = true;
+            
         }
+
+        if (collision.CompareTag("Web"))
+        {
+            print(Speed);
+            Speed = Speed / Speed_change;
+            print(Speed);
+
+
+        }
+
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -135,6 +147,12 @@ public class PlayerMovment : MonoBehaviour
         if (state == PlayerState.Zipline && collision.transform == currentZipline)
         {
             LeavZip();
+        }
+        if (collision.CompareTag("Web"))
+        {
+            Speed = Speed*Speed_change;
+
+
         }
     }
 
