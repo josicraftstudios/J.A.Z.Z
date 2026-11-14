@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2861404996242521884}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,6 +111,7 @@ MonoBehaviour:
   Jump: 12
   GroundedRay: {fileID: 5148698555927323939}
   Gun: {fileID: 0}
+  Bird: {fileID: 0}
 --- !u!50 &3367435412898562526
 Rigidbody2D:
   serializedVersion: 5

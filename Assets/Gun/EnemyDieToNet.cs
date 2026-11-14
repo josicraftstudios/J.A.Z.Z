@@ -11,7 +11,7 @@ public class EnemyDieToNet : MonoBehaviour
         if (collision.CompareTag("Net"))
         {
             Debug.Log("Net detected! Destroying object.");
-            Destroy(gameObject);
+            Destroy(transform.parent.gameObject);
         }
     }
 }
