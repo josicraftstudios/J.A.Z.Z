@@ -110,8 +110,8 @@ MonoBehaviour:
   Speed: 10
   Jump: 12
   GroundedRay: {fileID: 5148698555927323939}
-  Gun: {fileID: 0}
-  Bird: {fileID: 0}
+  Gun: {fileID: 2047772758141389532, guid: 88f03bd6d4b70984e830fa69939a3e9d, type: 3}
+  Bird: {fileID: 5811230832106753793, guid: ee19a1a0e9bcef248b00dacb13ac1c85, type: 3}
 --- !u!50 &3367435412898562526
 Rigidbody2D:
   serializedVersion: 5
