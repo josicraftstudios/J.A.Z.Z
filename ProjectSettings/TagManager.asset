@@ -9,6 +9,8 @@ TagManager:
   - NewNet
   - PickupPoint
   - Zipline
+  - Enemy
+  - Net
   layers:
   - Default
   - TransparentFX

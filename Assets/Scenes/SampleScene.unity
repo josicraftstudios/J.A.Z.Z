@@ -1269,6 +1269,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 453702738477573275, guid: ee19a1a0e9bcef248b00dacb13ac1c85, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1878380454159455631, guid: ee19a1a0e9bcef248b00dacb13ac1c85, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 4032064767236627011, guid: ee19a1a0e9bcef248b00dacb13ac1c85, type: 3}
       propertyPath: targetPositionTransform
       value: 
@@ -1276,6 +1284,10 @@ PrefabInstance:
     - target: {fileID: 5811230832106753793, guid: ee19a1a0e9bcef248b00dacb13ac1c85, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6811653643686793501, guid: ee19a1a0e9bcef248b00dacb13ac1c85, type: 3}
+      propertyPath: m_BodyType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8328053857385758504, guid: ee19a1a0e9bcef248b00dacb13ac1c85, type: 3}
       propertyPath: targetPositionTransform
@@ -3073,6 +3085,10 @@ PrefabInstance:
       propertyPath: Gun
       value: 
       objectReference: {fileID: 1947877066}
+    - target: {fileID: 4852665483691046443, guid: 4db33613091ae964ea847c88ff2c193a, type: 3}
+      propertyPath: Bird
+      value: 
+      objectReference: {fileID: 5811230832106753793, guid: ee19a1a0e9bcef248b00dacb13ac1c85, type: 3}
     - target: {fileID: 8380605831361972589, guid: 4db33613091ae964ea847c88ff2c193a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
