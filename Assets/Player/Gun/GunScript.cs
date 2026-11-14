@@ -9,6 +9,7 @@ public class GunScript : MonoBehaviour
 
     public GameObject Net;
     public GameObject NetPickup;
+    public ParticleSystem burstPrefab;
 
 
     //audio
@@ -72,6 +73,13 @@ public class GunScript : MonoBehaviour
         GameObject[] pickupPoints = GameObject.FindGameObjectsWithTag("PickupPoint");
         int randomIndex = Random.Range(0, pickupPoints.Length);
 
-        Instantiate(NetPickup, pickupPoints[randomIndex].transform.position,Quaternion.identity);
+        Vector3 Pos = pickupPoints[randomIndex].transform.position;
+        Instantiate(NetPickup, Pos,Quaternion.identity);
+        if (burstPrefab != null)
+        {
+            ParticleSystem spawnedEffect = Instantiate(burstPrefab, Pos, Quaternion.identity);
+            spawnedEffect.Play();
+            Destroy(spawnedEffect.gameObject, .41f);
+        }
     }
 }

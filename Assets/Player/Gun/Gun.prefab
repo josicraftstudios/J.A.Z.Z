@@ -108,8 +108,10 @@ MonoBehaviour:
   Player: {fileID: 0}
   Net: {fileID: 2652017464355177275, guid: 986ec8d56d4c4ab4b860e92d9b584e52, type: 3}
   NetPickup: {fileID: 5244209407240666835, guid: 139aa02e9c611964cbc3bb2d983845c9, type: 3}
+  burstPrefab: {fileID: 8785232857449157203, guid: ea5e3d172bb98e14f9b0e16e7d2ea803, type: 3}
   audioSource: {fileID: 9129166370507501133}
   soundEffect: {fileID: 8300000, guid: b2aa11a4d2df3664bafd859df3a4c25a, type: 3}
+  Loaded: 1
 --- !u!82 &9129166370507501133
 AudioSource:
   m_ObjectHideFlags: 0
