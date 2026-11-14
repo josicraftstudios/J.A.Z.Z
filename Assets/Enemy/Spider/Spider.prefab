@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4130745020068704765}
   - component: {fileID: 1743601274027210094}
-  - component: {fileID: 1666198320209008569}
   - component: {fileID: 4389524385065959076}
   - component: {fileID: -2055034049892841275}
+  - component: {fileID: 6832533248388995553}
   m_Layer: 0
   m_Name: Spider
   m_TagString: Untagged
@@ -95,18 +95,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &1666198320209008569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3867735123763214089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 838a70e001dc2d14ebebc66f67bfe1a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyDieToNetSpider
 --- !u!58 &4389524385065959076
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -170,6 +158,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6832533248388995553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3867735123763214089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838a70e001dc2d14ebebc66f67bfe1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDieToNetSpider
 --- !u!1 &5434186827437321193
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 4606598437363457596}
   m_Layer: 0
   m_Name: Web
-  m_TagString: Untagged
+  m_TagString: Web
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

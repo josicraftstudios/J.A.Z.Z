@@ -32,12 +32,12 @@ public class EnemySpawnerScribt : MonoBehaviour
 
             GameObject[] Leaves = GameObject.FindGameObjectsWithTag("Block");
             int RandomLeaf = Random.Range(0, Leaves.Length);
-            print(Leaves[RandomLeaf]);
+            //print(Leaves[RandomLeaf]);
             Vector2 SpawnPoint = new Vector2(Leaves[RandomLeaf].transform.position.x, Leaves[RandomLeaf].transform.position.y + Spider_spawn_offset);
 
 
             Instantiate(Bird, f[randomIndex].transform.position, Quaternion.identity);
-            print(level);
+            //print(level);
 
             if(level==3 || level == 8)
             {
