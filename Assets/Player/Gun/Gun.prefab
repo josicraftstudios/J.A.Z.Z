@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2259143530821138958}
   - component: {fileID: 2750152357743347020}
   - component: {fileID: 6256542176708002920}
+  - component: {fileID: 7198034590012680736}
   - component: {fileID: 9129166370507501133}
   m_Layer: 0
   m_Name: Gun
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.43, y: 0.55, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,8 +84,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.1792453, g: 0.1792453, b: 0.1792453, a: 1}
+  m_Sprite: {fileID: 51926210689801115, guid: e4e630ef8aa73bb4b93558b8252a5ec6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -112,6 +113,23 @@ MonoBehaviour:
   audioSource: {fileID: 9129166370507501133}
   soundEffect: {fileID: 8300000, guid: b2aa11a4d2df3664bafd859df3a4c25a, type: 3}
   Loaded: 1
+--- !u!114 &7198034590012680736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047772758141389532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0204aba55b4651047b7e8194016dd547, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GunArt
+  Gun1_0: {fileID: 51926210689801115, guid: e4e630ef8aa73bb4b93558b8252a5ec6, type: 3}
+  Gun1_1: {fileID: -7887842795193307104, guid: d8719142331d8c2419289546c019a815, type: 3}
+  Gun2_0: {fileID: 5623826503070513520, guid: 7d1c8c83a2ff7ed4499590c22b2cc09e, type: 3}
+  Gun2_1: {fileID: 2115576464859786642, guid: a4139b62e74b1424eb5e83cc411157d0, type: 3}
+  Gun2_2: {fileID: 1116216247002391853, guid: d0a88a2a1754f4343a018096c3578e6c, type: 3}
 --- !u!82 &9129166370507501133
 AudioSource:
   m_ObjectHideFlags: 0
