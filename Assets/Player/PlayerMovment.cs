@@ -125,8 +125,11 @@ public class PlayerMovment : MonoBehaviour
                 }
                 break;
         }
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(gameObject);
+        }
     }
-
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (state == PlayerState.Zipline && collision.transform == currentZipline)

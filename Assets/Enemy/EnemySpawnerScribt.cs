@@ -4,7 +4,7 @@ public class EnemySpawnerScribt : MonoBehaviour
 {
     public GameObject Bird;
     public GameObject Ground;
-    public static int level = 0;
+    public int level = 0;
 
     // Update is called once per frame
     void Update()
