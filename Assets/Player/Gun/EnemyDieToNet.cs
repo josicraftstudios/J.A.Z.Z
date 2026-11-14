@@ -1,9 +1,16 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyDieToNet : MonoBehaviour
 {
+    private Inventory Inv;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private void Awake()
+    {
+        GameObject[] I = GameObject.FindGameObjectsWithTag("Inventory");
+        Inv = I[0].GetComponent<Inventory>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Debug.Log("Triggered by: " + collision.gameObject.name);
@@ -12,6 +19,7 @@ public class EnemyDieToNet : MonoBehaviour
         {
             //Debug.Log("Net detected! Destroying object.");
             Debug.Log(gameObject);
+            Inv.Add_bird();
             Destroy(transform.parent.gameObject);
             Destroy(gameObject);
         }
