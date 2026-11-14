@@ -287,6 +287,7 @@ GameObject:
   - component: {fileID: 8227040571436249256}
   - component: {fileID: 9107698711146133448}
   - component: {fileID: 515278473916569465}
+  - component: {fileID: 4130951674698778547}
   m_Layer: 0
   m_Name: GroundEnemy
   m_TagString: Enemy
@@ -469,3 +470,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4130951674698778547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8727032048736751240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0bd06cdf7a80ee40a481f3d8093f856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BirdAnimation
+  WingsUp: {fileID: -6179839544601894180, guid: d7db7718faf9c374d94a6571feb8c555, type: 3}
+  WingsDown: {fileID: 557782082634697850, guid: 40096df054c5ac74ab5049982ec6bb12, type: 3}
