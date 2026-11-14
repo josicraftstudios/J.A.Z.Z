@@ -16,7 +16,7 @@ public class PlayerMovment : MonoBehaviour
 
     // Zipline stuff
     private int ZipDir = 1;
-    private int ZipSpeed = 3;
+    private int ZipSpeed = 3;   
     private float LookForZip = 0;
     private bool SpaceBarPrees = false;
     private Transform currentZipline;

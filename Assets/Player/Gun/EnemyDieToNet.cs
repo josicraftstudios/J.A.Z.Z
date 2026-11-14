@@ -12,6 +12,7 @@ public class EnemyDieToNet : MonoBehaviour
         {
             Debug.Log("Net detected! Destroying object.");
             Destroy(transform.parent.gameObject);
+            Destroy(gameObject);
         }
     }
 }
