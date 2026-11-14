@@ -46,3 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerScribt
   Bird: {fileID: 5811230832106753793, guid: ee19a1a0e9bcef248b00dacb13ac1c85, type: 3}
   Ground: {fileID: 8727032048736751240, guid: 5b7b7ff9e322ad34e8c7695311cffe40, type: 3}
+  Spider: {fileID: 3867735123763214089, guid: 72817b14f460b8c42b467db02c550d9d, type: 3}

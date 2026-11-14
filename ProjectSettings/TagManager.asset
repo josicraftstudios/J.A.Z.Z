@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - Net
   - BirdSpawn
+  - Borders
   layers:
   - Default
   - TransparentFX

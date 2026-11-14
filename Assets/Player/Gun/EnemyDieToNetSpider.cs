@@ -9,8 +9,10 @@ public class EnemyDieToNetSpider : MonoBehaviour
 
         if (collision.CompareTag("Net"))
         {
+            print("AWWWWWGTG");
+            //Destroy(transform.parent.gameObject);
             Destroy(gameObject);
-            print("Wow");
+            //print("Wow");
         }
     }
 }
