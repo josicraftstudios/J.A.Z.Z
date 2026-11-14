@@ -2,7 +2,7 @@
 - Project name: J.A.Z.Z
 - Unity version: Unity 6000.3.25f1
 - Active game object:
-  - Name: Trees
-  - Tag: Untagged
+  - Name: Truck (2)
+  - Tag: Tree
   - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
