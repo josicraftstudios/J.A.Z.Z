@@ -29,4 +29,5 @@ public class NetScribt : MonoBehaviour
     {
         Speed += velocity;
     }
+
 }
