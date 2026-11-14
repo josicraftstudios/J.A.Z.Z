@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Block
   - Tree
+  - NewNet
+  - PickupPoint
+  - Zipline
   layers:
   - Default
   - TransparentFX
