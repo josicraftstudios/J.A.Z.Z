@@ -13,7 +13,6 @@ public class PlayerMovment : MonoBehaviour
     //Player stuff
     private PlayerState state = PlayerState.Norm;
     public GameObject Gun;
-    public GameObject Bird;
 
     // Zipline stuff
     private int ZipDir = 1;
@@ -64,12 +63,6 @@ public class PlayerMovment : MonoBehaviour
             SpaceBarPrees = true;
         }
 
-        //spawn new bird
-        GameObject[] pickupPoints = GameObject.FindGameObjectsWithTag("Enemy");
-        if (pickupPoints.Length <= 0)
-        {
-            Instantiate(Bird, Vector3.down, Quaternion.identity);
-        }
 
     }
 

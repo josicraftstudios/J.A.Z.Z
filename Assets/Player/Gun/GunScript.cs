@@ -68,7 +68,7 @@ public class GunScript : MonoBehaviour
 
     private void NewNet()
     {
-
+       
         GameObject[] pickupPoints = GameObject.FindGameObjectsWithTag("PickupPoint");
         int randomIndex = Random.Range(0, pickupPoints.Length);
 
