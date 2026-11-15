@@ -3,7 +3,7 @@ using UnityEngine;
 public class GroundEnemy : MonoBehaviour
 {
     private Transform body;
-    public int speed=2;
+    public int speed=4;
     private float leftBound;
     private float rightBound;
     private int direction = 1;

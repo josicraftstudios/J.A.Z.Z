@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6633178ac90ff1b4fa478ab58d960829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GroundEnemy
-  speed: 3
+  speed: 8
 --- !u!61 &8227040571436249256
 BoxCollider2D:
   m_ObjectHideFlags: 0
