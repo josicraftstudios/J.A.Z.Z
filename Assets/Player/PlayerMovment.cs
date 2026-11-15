@@ -10,9 +10,11 @@ public class PlayerMovment : MonoBehaviour
     private Rigidbody2D body;
     public Transform GroundedRay;
 
+    public AudioSource audioSource;
+    public AudioClip Realod;
     public AudioSource WalkAudio;
     public AudioSource ZiplineAudio;
- 
+
 
     //Player stuff
     private PlayerState state = PlayerState.Norm;
@@ -114,6 +116,7 @@ public class PlayerMovment : MonoBehaviour
         if (collision.CompareTag("NewNet"))
         {
             Destroy(collision.gameObject);
+            audioSource.PlayOneShot(Realod);
             Gun.GetComponent<GunScript>().Loaded++;
             
         }
