@@ -75,8 +75,17 @@ public class PlayerMovment : MonoBehaviour
 
     }
 
+    /*if (state == PlayerState.Zipline)
+        {
 
-    private void OnTriggerStay2D(Collider2D collision)
+            ZiplineAudio.Play();
+        }
+        else if (state == PlayerState.Norm)
+{
+    ZiplineAudio.Stop();
+}*/
+
+private void OnTriggerStay2D(Collider2D collision)
     {
         switch (state)
         {
@@ -87,6 +96,7 @@ public class PlayerMovment : MonoBehaviour
                     {
                         currentZipline = collision.transform;
                         state = PlayerState.Zipline;
+                        ZiplineAudio.Play();
                         transform.position = collision.ClosestPoint(transform.position);
 
                         ZipSpeed = Mathf.RoundToInt(body.linearVelocity.magnitude);
@@ -145,15 +155,6 @@ public class PlayerMovment : MonoBehaviour
 
         }
         
-        if (state == PlayerState.Zipline)
-        {
-
-            ZiplineAudio.Play();
-        }
-        else if(state == PlayerState.Norm)
-        {
-            ZiplineAudio.Stop();
-        }
 
         switch (state)
         {
@@ -198,6 +199,7 @@ public class PlayerMovment : MonoBehaviour
 
         transform.rotation = Quaternion.identity;
         body.gravityScale = 3;
+        ZiplineAudio.Stop();
     }
     enum PlayerState { Norm, Zipline };
 
