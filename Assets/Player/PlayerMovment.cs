@@ -10,7 +10,8 @@ public class PlayerMovment : MonoBehaviour
     private Rigidbody2D body;
     public Transform GroundedRay;
 
-    public AudioSource AudioSource;
+    public AudioSource WalkAudio;
+    public AudioSource ZiplineAudio;
  
 
     //Player stuff
@@ -130,15 +131,25 @@ public class PlayerMovment : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Block" && body.linearVelocity.x != 0 && !AudioSource.isPlaying)
+        if (collision.gameObject.tag == "Block" && body.linearVelocity.x != 0 && !WalkAudio.isPlaying)
         {
-            AudioSource.Play();
+            WalkAudio.Play();
 
         }
-        else if (collision.gameObject.tag != "Block" ||  body.linearVelocity.x == 0)
+        else if (collision.gameObject.tag != "Block" || collision.gameObject.tag == "Block" && body.linearVelocity.x == 0)
         {
-            AudioSource.Stop();
+            WalkAudio.Stop();
 
+        }
+        
+        if (state == PlayerState.Zipline)
+        {
+
+            ZiplineAudio.Play();
+        }
+        else if(state == PlayerState.Norm)
+        {
+            ZiplineAudio.Stop();
         }
 
         switch (state)
