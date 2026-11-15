@@ -9,6 +9,8 @@ public class PlayerMovment : MonoBehaviour
     public int Jump;
     private Rigidbody2D body;
     public Transform GroundedRay;
+
+    public AudioSource AudioSource;
  
 
     //Player stuff
@@ -29,7 +31,10 @@ public class PlayerMovment : MonoBehaviour
 
     private void Update()
     {
-        switch (state)
+
+
+
+            switch (state)
         {
             case PlayerState.Norm:
                 body.linearVelocity = new Vector2(Input.GetAxis("Horizontal") * Speed, body.linearVelocityY);
@@ -125,6 +130,17 @@ public class PlayerMovment : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "Block" && body.linearVelocity.x != 0 && !AudioSource.isPlaying)
+        {
+            AudioSource.Play();
+
+        }
+        else if (collision.gameObject.tag != "Block" ||  body.linearVelocity.x == 0)
+        {
+            AudioSource.Stop();
+
+        }
+
         switch (state)
         {
             case PlayerState.Norm:
