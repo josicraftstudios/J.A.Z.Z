@@ -16,6 +16,7 @@ public class GunScript : MonoBehaviour
     //audio
     public AudioSource audioSource;
     public AudioClip soundEffect;
+    public AudioClip soundNewNet;
     public int Loaded = 2;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -82,6 +83,7 @@ public class GunScript : MonoBehaviour
             ParticleSystem spawnedEffect = Instantiate(burstPrefab, Pos, Quaternion.identity);
             spawnedEffect.Play();
             Destroy(spawnedEffect.gameObject, .41f);
+            audioSource.PlayOneShot(soundNewNet,.5f);
         }
     }
 }

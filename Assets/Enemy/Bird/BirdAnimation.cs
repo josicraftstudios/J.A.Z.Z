@@ -6,6 +6,8 @@ public class BirdAnimation : MonoBehaviour
     public Sprite WingsUp;
     public Sprite WingsDown;
     private int wings;
+    public AudioSource audioSource;
+    public AudioClip soundEffect;
 
     private void Awake()
     {
@@ -16,5 +18,6 @@ public class BirdAnimation : MonoBehaviour
     public void Flap()
     {
         if (wings == 1){ Spr.sprite = WingsUp; wings = 0; } else {  Spr.sprite = WingsDown; wings = 1; }
+        audioSource.PlayOneShot(soundEffect, .5f);
     }
 }

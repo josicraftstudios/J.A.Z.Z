@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyDieToNet : MonoBehaviour
 {
     private Inventory Inv;
+    public AudioSource audioSource;
+    public AudioClip soundEffect1;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
@@ -20,6 +22,7 @@ public class EnemyDieToNet : MonoBehaviour
             //Debug.Log("Net detected! Destroying object.");
             Debug.Log(gameObject);
             Inv.Add_bird();
+            audioSource.PlayOneShot(soundEffect1);
             Destroy(transform.parent.gameObject);
             Destroy(gameObject);
         }

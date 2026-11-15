@@ -113,6 +113,7 @@ MonoBehaviour:
   burstPrefab: {fileID: 8785232857449157203, guid: ea5e3d172bb98e14f9b0e16e7d2ea803, type: 3}
   audioSource: {fileID: 9129166370507501133}
   soundEffect: {fileID: 8300000, guid: b2aa11a4d2df3664bafd859df3a4c25a, type: 3}
+  soundNewNet: {fileID: 8300000, guid: aad2c303e3c9a084db9c74358b8b09fc, type: 3}
   Loaded: 1
 --- !u!114 &7198034590012680736
 MonoBehaviour:
