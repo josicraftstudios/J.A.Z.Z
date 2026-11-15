@@ -5,6 +5,7 @@ public class EnemySpawnerScribt : MonoBehaviour
     public GameObject Bird;
     public GameObject Ground;
     public GameObject Spider;
+    public GameObject Frog;
     public int level = 0;
     public int Spider_spawn_offset = 4;
 
@@ -60,10 +61,34 @@ public class EnemySpawnerScribt : MonoBehaviour
         Instantiate(Bird, f[randomIndex].transform.position, Quaternion.identity);
         //print(level);
 
-        if (level == 3 || level == 8)
+        if (level >= 3 && level!=4)
         {
             print(level + "true");
-            Instantiate(Ground, new Vector3(-20.18f, -3, 0), Quaternion.identity);
+            Instantiate(Ground, new Vector3(-20.18f, -4f, 0), Quaternion.identity);
+        }
+        if (level >= 4)
+        {
+            print(level + "true");
+
+            Vector3 Spawn = new Vector3(0,0,0);
+            if(Random.Range(1, 3) == 1)
+            {
+                Spawn.x = -25.21f;
+            }
+            else
+            {
+                Spawn.x = 25.38f;
+            }
+            Spawn.y = Random.Range(0,20);
+            GameObject Frogo = Instantiate(Frog, Spawn, Quaternion.identity);
+            Transform Forgostuff = Frogo.transform;
+            Transform Forgoheadstuff = Frogo.transform.Find("FROGHead");
+
+            if (Spawn.x > 0)
+            {
+                Forgostuff.localScale = new Vector3(-1.43f, 1.43f, 1.43f);
+                Forgoheadstuff.localScale = new Vector3(-1, -1, 1);
+            }
         }
         if (level % 2 == 0)
         {

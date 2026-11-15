@@ -22,14 +22,28 @@ public class GunArt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (data.Loaded)
-        {
-            spriteRenderer.sprite = Gun1_1;
-        }
-        else
-        {
-            spriteRenderer.sprite = Gun1_0;
-        }
+        if (data.Net2) {
+            if (data.Loaded > 1)
+            {
+                spriteRenderer.sprite = Gun2_2;
+            }
+            else if (data.Loaded > 0) {
+                
+                    spriteRenderer.sprite = Gun2_1;
+                }else{
+                    spriteRenderer.sprite = Gun2_0;
+                }
+            } else
+            {
+                if (data.Loaded > 0)
+                {
+                    spriteRenderer.sprite = Gun1_1;
+                }
+                else
+                {
+                    spriteRenderer.sprite = Gun1_0;
+                }
+            }
 
         if (body.eulerAngles.z >= 90 && body.eulerAngles.z <= 270)
         {

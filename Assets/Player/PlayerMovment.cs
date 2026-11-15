@@ -108,7 +108,7 @@ public class PlayerMovment : MonoBehaviour
         if (collision.CompareTag("NewNet"))
         {
             Destroy(collision.gameObject);
-            Gun.GetComponent<GunScript>().Loaded = true;
+            Gun.GetComponent<GunScript>().Loaded++;
             
         }
 

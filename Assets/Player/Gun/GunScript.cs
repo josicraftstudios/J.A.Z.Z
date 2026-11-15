@@ -6,6 +6,7 @@ public class GunScript : MonoBehaviour
     private Vector3 TargetPos;
     private Transform body;
 
+    public bool Net2 = true;
 
     public GameObject Net;
     public GameObject NetPickup;
@@ -15,7 +16,7 @@ public class GunScript : MonoBehaviour
     //audio
     public AudioSource audioSource;
     public AudioClip soundEffect;
-    public bool Loaded = true;
+    public int Loaded = 2;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -37,11 +38,12 @@ public class GunScript : MonoBehaviour
         body.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
         #endregion
 
+
         #region Shooting
-        if(Loaded && Input.GetMouseButtonDown(0))
+        if(Loaded>0 && Input.GetMouseButtonDown(0))
         {
             audioSource.PlayOneShot(soundEffect);
-            Loaded = false;
+            Loaded--;
             //spawn new net
             Invoke("NewNet", 5f);
 

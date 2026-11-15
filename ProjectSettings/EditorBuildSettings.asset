@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 128cc8af767e6674da29dd67171c201d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Game.unity
     guid: 7035ee661c1df884a8c86b57637d33f7
+  - enabled: 1
+    path: Assets/Scenes/Johannes.unity
+    guid: 91759168bcd1cac44b59bbd774a9b40c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
